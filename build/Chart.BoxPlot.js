@@ -956,12 +956,15 @@ var defaults$2 = {
 			label: function label(item, data) {
 				var datasetLabel = data.datasets[item.datasetIndex].label || '';
 				var value = data.datasets[item.datasetIndex].data[item.index];
-				var b = asBoxPlotStats(value);
+				this.b = asBoxPlotStats(value);
 				var label = datasetLabel + ' ' + (typeof item.xLabel === 'string' ? item.xLabel : item.yLabel);
-				if (!b) {
+				if (!this.b) {
 					return label + 'NaN';
 				}
-				return label + ' (min: ' + b.min + ', q1: ' + b.q1 + ', median: ' + b.median + ', q3: ' + b.q3 + ', max: ' + b.max + ')';
+				return label;
+			},
+			footer: function() {
+				return ['min: ' + this.b.min, 'q1: ' + this.b.q1, 'median: ' + this.b.median, 'q3: ' + this.b.q3, 'max: ' + this.b.max];
 			}
 		}
 	}
