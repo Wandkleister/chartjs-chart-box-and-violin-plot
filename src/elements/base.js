@@ -6,7 +6,7 @@ import {computeLaneWidth} from '../utils';
 
 export const defaults = Object.assign({}, Chart.defaults.global.elements.rectangle, {
 	borderWidth: 1,
-	outlierRadius: 2,
+	outlierRadius: 5,
 	outlierColor: Chart.defaults.global.elements.rectangle.backgroundColor,
 	itemRadius: 2,
 	itemStyle: 'circle',
