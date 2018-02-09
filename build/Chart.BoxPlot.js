@@ -559,7 +559,7 @@ function computeLaneWidth(width, padding) {
 
 var defaults$1 = Object.assign({}, Chart.defaults.global.elements.rectangle, {
 	borderWidth: 1,
-	outlierRadius: 5,
+	outlierRadius: 3,
 	outlierColor: Chart.defaults.global.elements.rectangle.backgroundColor,
 	itemRadius: 2,
 	itemStyle: 'circle',
